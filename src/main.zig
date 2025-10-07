@@ -1,5 +1,4 @@
 const std = @import("std");
-const idk = @import("idk");
 
 pub fn DoublyLinkedList(comptime T: type) type {
     return struct {
@@ -81,7 +80,6 @@ pub fn DoublyLinkedList(comptime T: type) type {
 pub fn main() !void {
     // Prints to stderr, ignoring potential errors.
     std.debug.print("All your {s} are belong to us.\n", .{"codebase"});
-    try idk.bufferedPrint();
 
     var gpa = std.heap.GeneralPurposeAllocator(.{}){};
     const allocator = gpa.allocator();
